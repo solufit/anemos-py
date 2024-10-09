@@ -1,12 +1,12 @@
-""" 
+"""
 Anemos Weather Schemas
 """
-from enum import StrEnum  # noqa: E0611
+from enum import Enum  # noqa: E0611
 
 from pydantic import BaseModel
 
 
-class AnemosObjectTypes(StrEnum):
+class AnemosObjectTypes(Enum):
     WeatherWarning = "Anemos.WeatherWarning"
     WeatherForecast = "Anemos.WeatherForecast"
     Earthquake = "Anemos.Earthquake"
