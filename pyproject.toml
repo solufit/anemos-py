@@ -1,0 +1,8 @@
+[tool.poetry]
+name = "anemos"
+version = "0.1.1"
+description = "package description"
+authors = ["Kengo Handa <kengo.handa@solufit.net>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/solufit/anemos-py"
