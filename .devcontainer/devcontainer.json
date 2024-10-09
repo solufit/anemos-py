@@ -2,44 +2,36 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.222.0/containers/python-3-miniconda
 {
 	"name": "Anemos",
-	"build": {
-		"dockerfile": "Dockerfile",
-		"context": ".."
+	"image": "mcr.microsoft.com/devcontainers/python:1-3.12-bullseye",
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/devcontainers/features/github-cli:1": {}
 	},
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "pip install --user -r ./requirements.txt",
+	// Configure tool-specific properties.
 	"customizations": {
+		"python": {
+			"installPackages": [
+				"python3-pip",
+				"python3-venv",
+				"python3-dev",
+				"python3-wheel",
+				"python3-setuptools"
+			]
+		},
 		"vscode": {
 			"extensions": [
-				"editorconfig.editorconfig",
-				"github.vscode-pull-request-github",
-				"ms-azuretools.vscode-docker",
 				"ms-python.python",
-				"ms-python.vscode-pylance",
-				"ms-python.pylint",
-				"ms-python.isort",
-				"ms-python.flake8",
-				"ms-python.black-formatter",
-				"ms-vsliveshare.vsliveshare",
-				"ryanluker.vscode-coverage-gutters",
-				"GitHub.copilot",
-				"tamasfe.even-better-toml",
-				"github.vscode-github-actions"
-			],
-			"settings": {
-				"python.defaultInterpreterPath": "/usr/local/bin/python",
-				"black-formatter.path": [
-					"/usr/local/py-utils/bin/black"
-				],
-				"pylint.path": [
-					"/usr/local/py-utils/bin/pylint"
-				],
-				"flake8.path": [
-					"/usr/local/py-utils/bin/flake8"
-				],
-				"isort.path": [
-					"/usr/local/py-utils/bin/isort"
-				]
-			}
+				"esbenp.prettier-vscode",
+				"mhutchie.git-graph",
+				"donjayamanne.githistory",
+				"ms-azuretools.vscode-docker"
+			]
 		}
 	},
-	"onCreateCommand": "pre-commit install-hooks"
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	"remoteUser": "root"
 }
