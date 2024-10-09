@@ -3,15 +3,13 @@ Anemos Weather Schemas
 """
 from enum import Enum  # noqa: E0611
 
-from pydantic import BaseModel
-
 
 class AnemosObjectTypes(Enum):
     WeatherWarning = "Anemos.WeatherWarning"
     WeatherForecast = "Anemos.WeatherForecast"
     Earthquake = "Anemos.Earthquake"
 
-class AnemosWeather(BaseModel):
+class AnemosWeather:
     object_type: str
     areacode: str
     title: str
