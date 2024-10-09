@@ -1,14 +1,14 @@
-# Author: Kengo Handa <sasanqua.dev@gmail.com>
+# Author: Kengo Handa <kengo.handa@solufit.net>
 # Copyright (c) 2024 Kengo Handa and Solufit
 # License: MIT License
 
 from setuptools import setup
 import anemos
 
-DESCRIPTION = "anemos-py: A Python library for Anemos API."
+DESCRIPTION = "anemos-py: A Python library for Anemos API"
 NAME = 'anemos-py'
 AUTHOR = 'Kengo Handa'
-AUTHOR_EMAIL = 'sasanqua.dev@gmail.com'
+AUTHOR_EMAIL = 'kengo.handa@solufit.net'
 URL = 'https://github.com/solufit/anemos-py'
 LICENSE = 'MIT License'
 DOWNLOAD_URL = 'https://github.com/solufit/anemos-py'
@@ -43,9 +43,7 @@ CLASSIFIERS = [
 
 with open('README.md', 'r') as fp:
     readme = fp.read()
-with open('CONTACT.txt', 'r') as fp:
-    contacts = fp.read()
-long_description = readme + '\n\n' + contacts
+long_description = readme
 
 setup(name=NAME,
       author=AUTHOR,
