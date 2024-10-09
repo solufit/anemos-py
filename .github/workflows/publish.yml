@@ -17,8 +17,14 @@ jobs:
               run: >-
                   python3 -m
                   pip install
-                  build pydantic requests
+                  build
                   --user
+            - name: Install dependencies
+              run: >-
+                  python3 -m
+                  pip install
+                  -r
+                  requirements.txt
             - name: Build a binary wheel and a source tarball
               run: python3 -m build
             - name: Store the distribution packages
