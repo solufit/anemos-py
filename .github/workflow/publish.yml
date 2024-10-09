@@ -1,0 +1,21 @@
+name: Publish to PyPI
+on:
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
+    release:
+        types: [created]
+jobs:
+    pypi-publish:
+        name: Upload release to PyPI
+        runs-on: ubuntu-latest
+        environment:
+            name: pypi
+            url: https://pypi.org/p/anemos-py
+        permissions:
+            id-token: write # IMPORTANT: this permission is mandatory for trusted publishing
+        steps:
+            # retrieve your distributions here
+            - name: Publish package distributions to PyPI
+              uses: pypa/gh-action-pypi-publish@release/v1
