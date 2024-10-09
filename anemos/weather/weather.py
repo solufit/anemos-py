@@ -1,10 +1,9 @@
 from .schemas import AnemosWeather, AnemosObjectTypes
 from typing import List
-from typing_extensions import deprecated
+# from typing_extensions import deprecated
 from typing import Union
 import requests
 
-@deprecated("この関数はv1以降で正式に実装される予定です。")
 def v2get(postcode: str, object_type: Union[AnemosObjectTypes, None] = None) -> List[AnemosWeather]:
     """
     Get weather information by postcode.
@@ -21,4 +20,4 @@ def v2get(postcode: str, object_type: Union[AnemosObjectTypes, None] = None) -> 
         url += f"&object_type={object_type.value}"
     response = requests.get(url)
     response.raise_for_status()
-    return [AnemosWeather(**weather) for weather in response.json()]
+    return [AnemosWeather(**weather) for weather in response.json()[0]]
