@@ -3,7 +3,6 @@
 # License: MIT License
 
 from setuptools import setup
-import anemos
 
 DESCRIPTION = "anemos-py: A Python library for Anemos API"
 NAME = 'anemos-py'
@@ -12,7 +11,7 @@ AUTHOR_EMAIL = 'kengo.handa@solufit.net'
 URL = 'https://github.com/solufit/anemos-py'
 LICENSE = 'MIT License'
 DOWNLOAD_URL = 'https://github.com/solufit/anemos-py'
-VERSION = anemos.__version__
+VERSION = '0.1.2'
 PYTHON_REQUIRES = ">=3.10"
 
 INSTALL_REQUIRES = [
