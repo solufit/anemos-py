@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from anemos.weather import AnemosObjectTypes, v2get
+from src.anemos.weather import AnemosObjectTypes, v2get
 
 
 def test_get():
