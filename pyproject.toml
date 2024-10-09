@@ -3,7 +3,7 @@ name = "anemos"
 version = "0.1.1"
 description = "package description"
 authors = ["Kengo Handa <kengo.handa@solufit.net>"]
-license = "MIT"
+license = "LICENSE"
 readme = "README.md"
 repository = "https://github.com/solufit/anemos-py"
 
