@@ -1,2 +1,4 @@
 requests==2.32.3
 pydantic==2.9.2
+twine==5.1.1
+wheel==0.44.0
