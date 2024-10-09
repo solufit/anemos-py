@@ -1,18 +1,24 @@
 from .schemas import AnemosWeather, AnemosObjectTypes
 from typing import List
 from typing_extensions import deprecated
-from datetime import datetime
 from typing import Union
 import requests
 
 @deprecated("この関数はv1以降で正式に実装される予定です。")
-def get(postcode: str, object_type: Union[AnemosObjectTypes, None] = None) -> List[AnemosWeather]:
-    return []
+def v2get(postcode: str, object_type: Union[AnemosObjectTypes, None] = None) -> List[AnemosWeather]:
+    """
+    Get weather information by postcode.
 
-@deprecated("この関数はv1以降で正式に実装される予定です。")
-def get_weekly(postcode: str) -> List[AnemosWeather]:
-    return []
+    Args:
+        postcode (str): The postcode of the location.
+        object_type (AnemosObjectTypes, optional): The type of weather information to get. Defaults to None.
 
-@deprecated("この関数はv1以降で正式に実装される予定です。")
-def get_daily() -> List[AnemosWeather]:
-    return []
+    Returns:
+        List[AnemosWeather]: A list of weather information.
+    """
+    url = f"https://anemos-intra.solufit.net/v2/weather?postcode={postcode}"
+    if object_type:
+        url += f"&object_type={object_type.value}"
+    response = requests.get(url)
+    response.raise_for_status()
+    return [AnemosWeather(**weather) for weather in response.json()]
