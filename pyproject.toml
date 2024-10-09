@@ -1,12 +1,48 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "anemos"
 version = "0.1.1"
-description = "package description"
-authors = ["Kengo Handa <kengo.handa@solufit.net>"]
-license = "LICENSE"
+description = "anemos-py: A Python library for Anemos API"
+authors = [
+    { name= "Kengo Handa", email= "kengo.handa@solufit.net" }
+]
+license = {text = "MIT License"}
 readme = "README.md"
 repository = "https://github.com/solufit/anemos-py"
+dynamic = ["version"]
+requires-python = ">= 3.8"
 
 dependencies = [
     "requests ~= 2.23.0",
 ]
+
+classifiers = [
+  # How mature is this project? Common values are
+  #   3 - Alpha
+  #   4 - Beta
+  #   5 - Production/Stable
+  "Development Status :: 4 - Beta",
+
+  # Indicate who your project is intended for
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Build Tools",
+
+  # Pick your license as you wish (see also "license" above)
+  "License :: OSI Approved :: MIT License",
+
+  # Specify the Python versions you support here.
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.6",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+]
+
+[project.urls]
+Homepage = "https://anemos.solufit.net"
+Documentation = "https://anemos.solufit.net"
+Repository = "https://github.com/solufit/anemos-py"
+Issues = "https://github.com/solufit/anemos-py/issues"
