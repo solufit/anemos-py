@@ -82,7 +82,7 @@ Return Value Example
 #### Get Weather Information with postcode and objectType
 
 ```python
-from anemos.weather import AnemosObjectType, v2get
+from anemos.weather import AnemosObjectTypes, v2get
 
 weather_informations = v2get("5320011", AnemosObjectTypes.WeatherWarning)
 ```
