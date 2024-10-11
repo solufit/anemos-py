@@ -15,9 +15,9 @@ def v2get(postcode: str, object_type: Union[AnemosObjectTypes, None] = None) -> 
     Returns:
         List[AnemosWeather]: A list of weather information.
     """
-    url = f"https://anemos-intra.solufit.net/v2/weather?postcode={postcode}"
+    url = f"https://anemos-intra.solufit.net/v2/weather?jpos_code={postcode}"
     if object_type:
         url += f"&object_type={object_type.value}"
     response = requests.get(url)
     response.raise_for_status()
-    return [AnemosWeather(**weather) for weather in response.json()[0]]
+    return [AnemosWeather(**weather, info_object_id=weather["info_objectId"]) for weather in response.json()[0]]

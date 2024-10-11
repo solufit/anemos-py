@@ -11,7 +11,7 @@ AUTHOR_EMAIL = 'kengo.handa@solufit.net'
 URL = 'https://github.com/solufit/anemos-py'
 LICENSE = 'MIT License'
 DOWNLOAD_URL = 'https://github.com/solufit/anemos-py'
-VERSION = '0.0.1'
+VERSION = '0.0.5'
 PYTHON_REQUIRES = ">=3.10"
 
 INSTALL_REQUIRES = [
