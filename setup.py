@@ -11,7 +11,7 @@ AUTHOR_EMAIL = 'kengo.handa@solufit.net'
 URL = 'https://github.com/solufit/anemos-py'
 LICENSE = 'MIT License'
 DOWNLOAD_URL = 'https://github.com/solufit/anemos-py'
-VERSION = '0.1.2'
+VERSION = '0.0.1'
 PYTHON_REQUIRES = ">=3.10"
 
 INSTALL_REQUIRES = [
@@ -29,7 +29,8 @@ PACKAGES = [
 ]
 
 CLASSIFIERS = [
-    'Intended Audience :: Science/Research/Software Developers',
+    'Intended Audience :: Science/Research',
+    'Intended Audience :: Developers',
     'License :: OSI Approved :: MIT License',
     'Programming Language :: Python :: 3',
     'Programming Language :: Python :: 3.6',
@@ -51,6 +52,7 @@ setup(name=NAME,
       maintainer_email=AUTHOR_EMAIL,
       description=DESCRIPTION,
       long_description=long_description,
+      long_description_content_type='text/markdown',
       license=LICENSE,
       url=URL,
       version=VERSION,
