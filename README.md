@@ -47,7 +47,7 @@ Return Value Example
         "publishing_office": "大阪管区気象台",
         "reported_time": "2024-10-10T05:00:00+09:00"
       },
-      "info_objectId": "5593591d-0de6-4d4a-a997-532c9eed1899",
+      "info_object_id": "5593591d-0de6-4d4a-a997-532c9eed1899",
       "areacode": null,
       "id": 178228,
       "status": "発表",
@@ -68,7 +68,7 @@ Return Value Example
         "headline": "大阪府では、８日明け方まで急な強い雨や落雷に注意してください。",
         "pref": "大阪市"
       },
-      "info_objectId": "51db0184-97b2-4040-9fe5-3aad9304c849",
+      "info_object_id": "51db0184-97b2-4040-9fe5-3aad9304c849",
       "areacode": "2710000",
       "id": 172614,
       "status": "解除",
